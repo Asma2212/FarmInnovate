@@ -4,6 +4,11 @@
  */
 package farminnovate;
 
+import Model.Date;
+import Model.Inventaire.Animal;
+import Model.Inventaire.Espece;
+
+
 /**
  *
  * @author ADMIN
@@ -15,6 +20,12 @@ public class FarmInnovate {
      */
     public static void main(String[] args) {
         // TODO code application logic here
+        Animal a= new Animal();
+        a.saisir();
+        a.afficher();
+        a.modifierAnimal();
+        a.afficher();
+     
     }
     
 }

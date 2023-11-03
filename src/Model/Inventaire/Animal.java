@@ -92,13 +92,13 @@ public class Animal {
         this.genre = sc.nextLine().toUpperCase();
          } while (!"F".equals(this.genre) && !"M".equals(this.genre));        
         System.out.println("entrez la date de naissance ");
-        this.dateNaiss.SaisieDate(sc);
+        this.dateNaiss.saisir(sc);
         System.out.println("entrez le poids en kilogramme");
         this.poids= sc.nextFloat();
     }
     
   /***************************Affichage***************************/ 
-    public void affichageAnimal(){
+    public void afficher(){
           String str = ", Espece: ";
 
     if (genre != null) {
@@ -124,22 +124,18 @@ public class Animal {
      }  
     }
 //************************Modifier***********************************
-    public void modifierAnimal(Animal a) {
+    public void modifierAnimal() {
         Scanner sc = new Scanner(System.in);
         System.out.println("Modification de l'animal");
-
-       // System.out.println("Entrez l'âge:");
-      //  a.dateNaiss = sc.nextInt();
-
-        sc.nextLine(); // Consume the newline character left by nextInt()
-
+        System.out.println("Entrez la date de naissance ");
+        this.dateNaiss.saisir(sc);
+        sc.nextLine();
         do {
             System.out.println("Entrez 'F' for female or 'M' for male: ");
-            a.genre = sc.nextLine().toUpperCase();
-        } while (!"F".equals(a.genre) && !"M".equals(a.genre));
-
+            this.genre = sc.nextLine().toUpperCase();
+        } while (!"F".equals(this.genre) && !"M".equals(this.genre));
         System.out.println("Entrez le poids en kilogrammes:");
-        a.poids = sc.nextFloat();
+        this.poids = sc.nextFloat();
 }
 
     

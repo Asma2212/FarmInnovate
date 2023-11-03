@@ -29,7 +29,7 @@ public class Date {
     public void setAnnee(int annee) { this.annee = annee; }
 
 //************************Saisie*****************
-   public void SaisieDate(Scanner sc) {
+   public void saisir(Scanner sc) {
     do {
         System.out.println("jour: ");
         this.jour = sc.nextInt();
