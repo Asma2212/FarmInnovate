@@ -16,6 +16,7 @@ public class Batiment {
     public Batiment(String idBatiment, String nomBatiment) {
         this.idBatiment = idBatiment;
         this.nomBatiment = nomBatiment; 
+        list = new ArrayList<>();
     } 
     
     // Getters and Setters
@@ -70,14 +71,11 @@ public class Batiment {
     public void supprimer(Object obj){
         if(list.get(0).getClass().isInstance(obj) && list.contains(obj)){
             list.remove(obj);
-            System.out.println("l'element a été supprimer avec succés");
+            System.out.println("l'element a été supprimé avec succés");
         }
         else
             System.out.println("l'element a supprimer n'existe pas dans la list");
     }
-    
-    //modifier un element dans la liste
-    
     
     // toString 
      @Override
