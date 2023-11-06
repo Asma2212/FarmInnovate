@@ -9,7 +9,32 @@ package Model.Action;
  * @author ADMIN
  */
 public class LigneCommande {
-    Production prod;
-    int Qte;
+    private Production prod;
+    private int Qte;
+
+    public LigneCommande() {
+    }
+
+    public LigneCommande(Production prod, int Qte) {
+        this.prod = prod;
+        this.Qte = Qte;
+    }
+
+    public Production getProd() {
+        return prod;
+    }
+
+    public void setProd(Production prod) {
+        this.prod = prod;
+    }
+
+    public int getQte() {
+        return Qte;
+    }
+
+    public void setQte(int Qte) {
+        this.Qte = Qte;
+    }
+    
     
 }

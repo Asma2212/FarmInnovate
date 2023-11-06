@@ -23,6 +23,7 @@ public class TestAction {
         Scanner sc = new Scanner(System.in);
         Fermier fermier = new Fermier();
         Responsable responsable = new Responsable();
+        Client client = new Client();
         fermier.setEmail("A");
         fermier.setMotDePasse("A");
         fermier.sinscrire(fermiers);
@@ -36,7 +37,7 @@ public class TestAction {
         System.out.println("Vous devez choisir un espace : \n");
         System.out.println("1- Espace Fermier \n");
         System.out.println("2- Espace Responsable \n");
-        System.out.println("3- Espace Ouvrier \n");
+        System.out.println("3- Espace Client \n");
         System.out.println("4- Quitter \n");
         choix = sc.nextInt();
         switch (choix) {
@@ -88,17 +89,13 @@ public class TestAction {
                 choix2 = sc.nextInt();
                 switch(choix2){
                     case 1-> {
-                        test = fermier.sauthentifier(sc,fermiers);
+                        test = client.sauthentifier(sc,clients);
                         if(!test) System.out.println("vous devez créer un compte !! ");
-                        if(test)
-                            testMenu = fermier.menu(sc);
-                                if(testMenu==-1) choix2=3;
-                        else
-                            System.out.println("vous devez créer un compte");
+                            choix2=3;
                     }
                     case 2 -> {
-                        fermier.saisir(sc);
-                        fermier.sinscrire(fermiers);
+                        client.saisir(sc);
+                        client.sinscrire(clients);
                     }
                 }
                 }while(choix2 != 3);

@@ -5,6 +5,8 @@
 package Model.Action;
 
 import Model.Date;
+import Model.Inventaire.Batiment;
+import Model.Inventaire.Plante;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.HashMap;
@@ -25,7 +27,8 @@ public class Responsable extends Personne implements IUser<Responsable>{
     private int nbrHeure;
     private double salaireH ;
     private Set<Ouvrier> ouvriers ;
-    //private Inventaire inventaire ;
+    private Set<Batiment> batiments;
+    private Set<Plante> plantes;
     private Map<Integer,Production> productions;
     
     // ***********************  Constructeurs ****************************  //
@@ -33,6 +36,8 @@ public class Responsable extends Personne implements IUser<Responsable>{
     public Responsable() {
         this.productions = new HashMap<>();
         this.ouvriers = new HashSet<>();
+        this.plantes = new HashSet<>();
+        this.batiments = new HashSet<>();
     }
 
     
@@ -40,6 +45,8 @@ public class Responsable extends Personne implements IUser<Responsable>{
         super(cin, genre, nom, prenom, numTel, dateNaiss, email);
         this.productions = new HashMap<>();
         this.ouvriers = new HashSet<>();
+        this.plantes = new HashSet<>();
+        this.batiments = new HashSet<>();
         this.motDePasse = motdepasse;
         this.nbrHeure = nbrHeure;
         this.salaireH=salaireH;
