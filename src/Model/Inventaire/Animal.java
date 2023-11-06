@@ -19,7 +19,7 @@ public class Animal {
         this.espece=espece;
         this.genre=genre;
         this.dateNaiss=dateNaiss;
-        this.poids=(float) poids;
+        this.poids= poids;
     }
     
     public Animal(){this.dateNaiss=new Date();}

@@ -60,7 +60,7 @@ public class Batiment {
     
     //ajouter des elements a la list 
     public void ajouter(Object obj) {
-    if (list.isEmpty() || list.get(0).getClass().isInstance(obj) || !list.contains(obj)) {
+    if (list.isEmpty() || list.get(0).getClass().isInstance(obj)) {
         list.add(obj);
         System.out.println("Objet ajouté");
     } else {
