@@ -4,9 +4,15 @@
  */
 package farminnovate;
 
-import Model.Date;
 import Model.Inventaire.Animal;
+import Model.Inventaire.Batiment;
 import Model.Inventaire.Espece;
+import Model.Date;
+import Model.Inventaire.Engrais;
+import Model.Inventaire.Materiel;
+import Model.Inventaire.Pesticide;
+import Model.Inventaire.Produit;
+
 
 
 /**
@@ -15,17 +21,19 @@ import Model.Inventaire.Espece;
  */
 public class FarmInnovate {
 
-    /**
+    /**100
+     * 
      * @param args the command line arguments
      */
-    public static void main(String[] args) {
-        // TODO code application logic here
-        Animal a= new Animal();
-        a.saisir();
-        a.afficher();
-        a.modifierAnimal();
-        a.afficher();
-     
+    public static void main(String[] args)  {
+        // TODO code application logic here  
+        Date d = new Date(12,12,2023);
+        Produit p = new Produit();
+        p.saisir();
+        System.out.println(p);
+        p.modifier();
+        System.out.println(p);
+        
     }
     
 }
